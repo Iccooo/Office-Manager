@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="UTF-8">
+    <title>OfficeManager</title>
+    <link href="css\style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+     <nav class="top_nav">
+            <form th:action="@{/main/page}" method="post">
+                <input type="submit" class="btn" value="Home" />
+            </form>
+            <form th:action="@{/}" method="post">
+                <input type="submit" class="btn" value="Rooms" />
+            </form>
+            <form th:action="@{/}" method="post">
+                <input type="submit" class="btn" value="Edit Rooms" />
+            </form>
+            <form th:action="@{/logout}" method="post">
+                <input type="submit" class="btn" value="Logout" />
+            </form>
+        </nav><br><br><br>
+
+
+        
+    <h1>Welcome, back!</h1>
+</body>
+
+</html>
