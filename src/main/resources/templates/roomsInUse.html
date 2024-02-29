@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Rooms in Use Now</title>
+</head>
+<body>
+<h1>Rooms in Use Now</h1>
+<ul>
+    <li th:each="room : ${roomsInUse}" th:text="${room.name}"></li>
+</ul>
+</body>
+</html>

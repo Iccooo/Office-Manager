@@ -7,7 +7,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 public class RegisterController {
@@ -16,19 +15,17 @@ public class RegisterController {
     private RegisterService registerService;
 
     @GetMapping("/register")
-    public ModelAndView register() {
-        ModelAndView mav = new ModelAndView("register");
-        mav.addObject("user", new User());
-        return mav;
+    public String showRegistrationForm() {
+        return "register";
     }
 
     @RequestMapping("/register")
-    public String register(@ModelAttribute("user") User user) {
+    public String registerUser(@ModelAttribute("user") User user) {
         boolean isUserRegistered = registerService.register(user);
 
         if (!isUserRegistered) {
             System.out.println("User already registered");
-            return "redirect:/register";
+            return "register";
         } else {
             return "redirect:/main/page";
         }
