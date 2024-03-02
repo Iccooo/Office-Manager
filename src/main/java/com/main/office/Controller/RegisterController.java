@@ -1,7 +1,8 @@
 package com.main.office.Controller;
 
 import com.main.office.Service.RegisterService;
-import com.main.office.model.User;
+import com.main.office.Мodel.User;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;

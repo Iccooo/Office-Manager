@@ -1,9 +1,10 @@
 package com.main.office.Repo;
 
-import com.main.office.model.Availability;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
+
+import com.main.office.Мodel.Availability;
 
 import java.util.List;
 

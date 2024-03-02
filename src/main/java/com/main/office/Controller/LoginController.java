@@ -1,7 +1,7 @@
 package com.main.office.Controller;
 
 import com.main.office.Service.LoginService;
-import com.main.office.model.User;
+import com.main.office.Мodel.User;
 
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;

@@ -1,7 +1,8 @@
 package com.main.office.Controller;
 
 import com.main.office.Service.RoomService;
-import com.main.office.model.Room;
+import com.main.office.Мodel.Room;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
-import com.main.office.model.Availability;
+import com.main.office.Мodel.Availability;
 
 @Controller
 public class AvailabilityController {

@@ -2,8 +2,9 @@ package com.main.office.Service;
 
 import com.main.office.Repo.AvailabilityRepository;
 import com.main.office.Repo.RoomRepository;
-import com.main.office.model.Availability;
-import com.main.office.model.Room;
+import com.main.office.Мodel.Availability;
+import com.main.office.Мodel.Room;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.main.office.Repo.AvailabilityRepository;
-import com.main.office.model.Availability;
+import com.main.office.Мodel.Availability;
 
 @Service
 public class AvailabilityService {
