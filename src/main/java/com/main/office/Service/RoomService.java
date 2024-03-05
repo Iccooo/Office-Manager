@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 import java.util.Set;
 import java.util.stream.Collectors;
 
@@ -29,5 +30,9 @@ public class RoomService {
                 .map(Availability::getRoom)
                 .collect(Collectors.toSet());
         return new ArrayList<>(roomsInUse);
+    }
+    
+    public Optional<Room> getRoomById(Long roomId) {
+        return roomRepository.findById(roomId);
     }
 }
