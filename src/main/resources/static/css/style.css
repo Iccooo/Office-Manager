@@ -21,7 +21,7 @@ width: 50%;
 
 /* style the navigation buttons */
 .top_nav .btn{
-    background-color: #c0b789;
+    background-color: rgb(212, 135, 46);
     margin: 3px;
     color: black;
     float: left ;

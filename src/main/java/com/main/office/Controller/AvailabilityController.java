@@ -12,14 +12,11 @@ import com.main.office.Мodel.Availability;
 public class AvailabilityController {
     @GetMapping("/editAvailability/{roomId}")
     public String editAvailability(@PathVariable Long roomId, Model model) {
-        // Retrieve availability for the specified room
-        // Pass availability data to the view
         return "editAvailability";
     }
 
     @PostMapping("/saveAvailability")
     public String saveAvailability(Availability availability) {
-        // Save or update availability data in the database
         return "redirect:/rooms";
     }
 }
