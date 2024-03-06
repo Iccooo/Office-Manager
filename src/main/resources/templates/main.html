@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>OfficeManager</title>
-    <link href="css\style.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 
 <body>
@@ -12,10 +12,10 @@
             <form th:action="@{/main/page}" method="post">
                 <input type="submit" class="btn" value="Home" />
             </form>
-            <form th:action="@{/rooms/status}" method="post">
+            <form th:action="@{/roomsInUse}" method="post">
                 <input type="submit" class="btn" value="Rooms" />
             </form>
-            <form th:action="@{/}" method="post">
+            <form th:action="@{/editRooms}" method="post">
                 <input type="submit" class="btn" value="Edit Rooms" />
             </form>
             <form th:action="@{/logout}" method="post">
