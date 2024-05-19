@@ -1,35 +1,23 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
 body {
     font-family: Arial, sans-serif;
     background-color: antiquewhite;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
-
-html {
-    height: 100%;
-}
-
-h1 {
-    text-align: center;
-    margin: auto;
-    width: 50%;
 }
 
 .top_nav {
     display: flex;
-    overflow: hidden;
+    justify-content: flex-start;
     background-color: #333;
     padding: 10px;
-    justify-content: center;
 }
 
 .top_nav .btn {
     background-color: rgb(212, 135, 46);
-    margin: 3px;
+    margin: 0 5px;
     color: black;
     padding: 10px;
     cursor: pointer;
@@ -48,23 +36,8 @@ form #login {
 }
 
 input[type=text],
-input[type=password] {
-    width: 100%;
-    padding: 12px 20px;
-    margin-top: 2%;
-    display: block;
-    border: 1px solid #f0f0f0;
-    box-sizing: border-box;
-}
-
-.container .btn {
-    width: 100%;
-    padding: 12px 20px;
-    margin-top: 1%;
-    display: block;
-    box-sizing: border-box;
-}
-
+input[type=password],
+.container .btn,
 label {
     width: 100%;
     padding: 12px 20px;
@@ -80,19 +53,18 @@ button:hover {
 .container {
     text-align: center;
     padding: 20px;
+    padding-left: 5%;
+    padding-right: 5%;
     border: 1px solid #ccc;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     background-color: #f9f9f9;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
 }
 
 table {
     margin: 0 auto;
     border-collapse: collapse;
+    width: 100%;
 }
 
 th,
