@@ -21,6 +21,7 @@ public class Availability {
         LocalDateTime now = LocalDateTime.now();
         return now.isAfter(startTime) && now.isBefore(endTime);
     }
+
     public Long getId() {
         return id;
     }
@@ -53,4 +54,3 @@ public class Availability {
         this.endTime = endTime;
     }
 }
-

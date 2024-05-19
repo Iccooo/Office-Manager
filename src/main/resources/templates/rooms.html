@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+  <meta charset="UTF-8">
+  <title>List of Rooms</title>
+  <link rel="stylesheet" type="text/css" href="/css/style.css">
+</head>
+
+<body>
+  <nav class="top_nav">
+    <form th:action="@{/main/page}" method="get">
+      <input type="submit" class="btn" value="Home" />
+    </form>
+    <form th:action="@{/rooms/inUse}" method="get">
+      <input type="submit" class="btn" value="In Use Rooms" />
+    </form>
+    <form th:action="@{/rooms/}" method="get">
+      <input type="submit" class="btn" value="Rooms" />
+    </form>
+    <button id="showFormBtn" class="btn">Reserve Room</button>
+    <form th:action="@{/editRooms}" method="post">
+      <input type="submit" class="btn" value="Edit Rooms" />
+    </form>
+    <form th:action="@{/logout}" method="post">
+      <input type="submit" class="btn" value="Logout" />
+    </form>
+
+  </nav><br><br><br>
+
+  <div class="container">
+    <h1>List of Rooms</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr th:each="room : ${rooms}">
+          <td th:text="${room.id}"></td>
+          <td th:text="${room.name}"></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</body>
+
+</html>

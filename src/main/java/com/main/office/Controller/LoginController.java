@@ -12,7 +12,6 @@ import org.springframework.web.servlet.ModelAndView;
 
 import java.util.Objects;
 
-
 @Controller
 public class LoginController {
     @Autowired
@@ -26,22 +25,20 @@ public class LoginController {
     }
 
     @PostMapping("/login")
-    public String login(@ModelAttribute("user") User user ) {
+    public String login(@ModelAttribute("user") User user) {
 
-        User oauthUser = userService.login(user.getUsername(),user.getEmail(), user.getPassword());
+        User oauthUser = userService.login(user.getUsername(), user.getEmail(), user.getPassword());
 
         System.out.print(oauthUser);
-        if(Objects.nonNull(oauthUser))
-        {
+        if (Objects.nonNull(oauthUser)) {
             return "redirect:/main/page";
         } else {
             return "redirect:/login";
         }
     }
 
-    @RequestMapping(value = {"/logout"}, method = RequestMethod.POST)
-    public String logoutDo(HttpServletRequest request,HttpServletResponse response)
-    {
+    @RequestMapping(value = { "/logout" }, method = RequestMethod.POST)
+    public String logoutDo(HttpServletRequest request, HttpServletResponse response) {
         return "redirect:/";
     }
 }

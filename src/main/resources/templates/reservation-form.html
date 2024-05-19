@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Reservation Form</title>
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Room Reservation Form</h1>
+        <form action="/rooms/reserve" method="post">
+            Room ID: <input type="text" name="roomId"><br>
+            Start Time: <input type="datetime-local" name="startTime"><br>
+            End Time: <input type="datetime-local" name="endTime"><br>
+            <input type="submit" value="Reserve">
+        </form>
+    </div>>
+</body>
+
+</html>

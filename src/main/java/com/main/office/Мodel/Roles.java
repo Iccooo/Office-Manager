@@ -2,12 +2,7 @@ package com.main.office.Мodel;
 
 import java.util.Set;
 
-import org.springframework.data.annotation.Id;
-
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.ManyToMany;
+import jakarta.persistence.*;
 
 @Entity
 public class Roles {
@@ -33,7 +28,6 @@ public class Roles {
         this.users = users;
     }
 
-    // Getters and setters for id and name
     public Long getId() {
         return id;
     }
@@ -50,4 +44,3 @@ public class Roles {
         this.name = name;
     }
 }
-

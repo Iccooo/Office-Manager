@@ -4,28 +4,47 @@
 <head>
     <meta charset="UTF-8">
     <title>OfficeManager</title>
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
 </head>
 
 <body>
-     <nav class="top_nav">
-            <form th:action="@{/main/page}" method="post">
-                <input type="submit" class="btn" value="Home" />
-            </form>
-            <form th:action="@{/roomsInUse}" method="post">
-                <input type="submit" class="btn" value="Rooms" />
-            </form>
-            <form th:action="@{/editRooms}" method="post">
-                <input type="submit" class="btn" value="Edit Rooms" />
-            </form>
-            <form th:action="@{/logout}" method="post">
-                <input type="submit" class="btn" value="Logout" />
-            </form>
-        </nav><br><br><br>
+    <nav class="top_nav">
+        <form th:action="@{/main/page}" method="get">
+            <input type="submit" class="btn" value="Home" />
+        </form>
+        <form th:action="@{/rooms/inUse}" method="get">
+            <input type="submit" class="btn" value="In Use Rooms" />
+        </form>
+        <form th:action="@{/rooms/}" method="get">
+            <input type="submit" class="btn" value="Rooms" />
+        </form>
+        <button id="showFormBtn" class="btn">Reserve Room</button>
+        <form th:action="@{/editRooms}" method="post">
+            <input type="submit" class="btn" value="Edit Rooms" />
+        </form>
+        <form th:action="@{/logout}" method="post">
+            <input type="submit" class="btn" value="Logout" />
+        </form>
 
+    </nav><br><br><br>
 
-        
-    <h1>Welcome, back!</h1>
+    <h1>Welcome, back<span th:text="${usernamе}"></span>!</h1>
+
+    <div id="reservationFormContainer" style="display: none;">
+        <form th:action="@{/rooms/reserve}" method="post">
+            Room ID: <input type="text" name="roomId"><br>
+            Start Time: <input type="datetime-local" name="startTime"><br>
+            End Time: <input type="datetime-local" name="endTime"><br>
+            <input type="submit" class="btn" value="Reserve Room" />
+        </form>
+    </div>
+
+    <script>
+        document.getElementById("showFormBtn").addEventListener("click", function () {
+            document.getElementById("reservationFormContainer").style.display = "block";
+        });
+    </script>
+
 </body>
 
 </html>

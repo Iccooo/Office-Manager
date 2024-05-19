@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reservation Result</title>
+  <link rel="stylesheet" type="text/css" href="/css/style.css">
+</head>
+
+<body>
+  <nav class="top_nav">
+    <form th:action="@{/main/page}" method="get">
+      <input type="submit" class="btn" value="Home" />
+    </form>
+    <form th:action="@{/rooms/inUse}" method="get">
+      <input type="submit" class="btn" value="In Use Rooms" />
+    </form>
+    <form th:action="@{/rooms/}" method="get">
+      <input type="submit" class="btn" value="Rooms" />
+    </form>
+    <button id="showFormBtn" class="btn">Reserve Room</button>
+
+
+
+    <form th:action="@{/editRooms}" method="post">
+      <input type="submit" class="btn" value="Edit Rooms" />
+    </form>
+    <form th:action="@{/logout}" method="post">
+      <input type="submit" class="btn" value="Logout" />
+    </form>
+
+  </nav>
+  <h1>Reservation Result</h1>
+  <div th:if="${message}">
+    <p style="color: green;" th:text="${message}"></p>
+  </div>
+  <div th:if="${error}">
+    <p style="color: red;" th:text="${error}"></p>
+  </div>
+</body>
+
+</html>

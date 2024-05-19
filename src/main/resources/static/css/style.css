@@ -3,29 +3,35 @@ body {
     background-color: antiquewhite;
     margin: 0;
     padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+html {
+    height: 100%;
 }
 
 h1 {
     text-align: center;
     margin: auto;
-width: 50%;
+    width: 50%;
 }
 
-/* style the navigation bar */
 .top_nav {
     display: flex;
     overflow: hidden;
     background-color: #333;
     padding: 10px;
+    justify-content: center;
 }
 
-/* style the navigation buttons */
-.top_nav .btn{
+.top_nav .btn {
     background-color: rgb(212, 135, 46);
     margin: 3px;
     color: black;
-    float: left ;
-    padding: 10px 10px;
+    padding: 10px;
     cursor: pointer;
 }
 
@@ -34,52 +40,72 @@ width: 50%;
     color: black;
 }
 
-
 form #login {
     margin: auto;
-    width: 30%;
-    border: 10px solid black;
-    padding: 10px;
     width: 50%;
+    border: 10px solid black;
     padding: 10px;
 }
 
 input[type=text],
 input[type=password] {
-    width: 30%;
+    width: 100%;
     padding: 12px 20px;
     margin-top: 2%;
-    margin: auto;
-    display: flex;
+    display: block;
     border: 1px solid #f0f0f0;
     box-sizing: border-box;
 }
 
 .container .btn {
-    width: 30%;
+    width: 100%;
     padding: 12px 20px;
-    margin: auto;
     margin-top: 1%;
-    display: flex;
+    display: block;
     box-sizing: border-box;
 }
-label{
-    width: 30%;
+
+label {
+    width: 100%;
     padding: 12px 20px;
-    margin: auto;
     margin-top: 1%;
-    display: flex;
+    display: block;
     box-sizing: border-box;
 }
+
 button:hover {
     opacity: 0.8;
 }
 
-.index_table{
-    width: 30%;
-    padding: 12px 20px;
-    margin: auto;
-    margin-top: 1%;
+.container {
+    text-align: center;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+table {
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+.index_table {
+    width: 100%;
+    padding: 12px 20px;
+    margin-top: 1%;
+    display: block;
     box-sizing: border-box;
 }

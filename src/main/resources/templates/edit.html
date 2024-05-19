@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
+
 <head>
     <title>OfficeManager</title>
 </head>
+
 <body>
-<h1>Edit Availability</h1>
-<form method="post" th:object="${availability}" th:action="@{/saveAvailability}">
-    <button type="submit">Save</button>
-</form>
+    <h1>Edit Availability</h1>
+    <form method="post" th:object="${availability}" th:action="@{/saveAvailability}">
+        <button type="submit">Save</button>
+    </form>
 </body>
+
 </html>

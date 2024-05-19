@@ -1,34 +1,50 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 
 <head>
-    <title>OfficeManager</title>
+    <meta charset="UTF-8">
+    <title>Rooms In Use</title>
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
 </head>
 
 <body>
     <nav class="top_nav">
-        <form th:action="@{/main/page}" method="post">
+        <form th:action="@{/main/page}" method="get">
             <input type="submit" class="btn" value="Home" />
         </form>
-        <form th:action="@{/rooms/status}" method="post">
+        <form th:action="@{/rooms/inUse}" method="get">
+            <input type="submit" class="btn" value="In Use Rooms" />
+        </form>
+        <form th:action="@{/rooms/}" method="get">
             <input type="submit" class="btn" value="Rooms" />
         </form>
-        <form th:action="@{/}" method="post">
+        <button id="showFormBtn" class="btn">Reserve Room</button>
+        <form th:action="@{/editRooms}" method="post">
             <input type="submit" class="btn" value="Edit Rooms" />
         </form>
         <form th:action="@{/logout}" method="post">
             <input type="submit" class="btn" value="Logout" />
         </form>
+
     </nav><br><br><br>
-    <ul th:each="room : ${rooms}">
-        <div class="rooms" style="margin-left: 2cm; margin-bottom: 3cm;padding-bottom: 2cm;">
-                <h2 th:text="${room.name}"></h2>
-                <p th:text="'Room ID: ' + ${room.id}"></p>
-                <p th:text="'Status: ' + ${room.status}"></p>
-                <p th:text="'Status: ' + ${room.purpuse}">
-                <p th:text="Booked by Hristo Angelov">
-        </div>
-    </ul>
+    <div class="container">
+        <h1>Rooms In Use</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Until</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="room : ${roomsInUse}">
+                    <td th:text="${room.id}"></td>
+                    <td th:text="${room.name}"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 </body>
 
 </html>

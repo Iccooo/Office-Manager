@@ -10,22 +10,22 @@ import jakarta.persistence.Id;
 import jakarta.persistence.JoinTable;
 import jakarta.persistence.ManyToMany;
 import jakarta.persistence.Table;
+import org.antlr.v4.runtime.misc.NotNull;
 
 @Entity
-@Table(name="users")
-public class User{
-
+@Table(name = "users")
+public class User {
     @Id
-    @GeneratedValue(strategy= GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String username;
+    @NotNull
     private String email;
     private String password;
 
     @ManyToMany
     @JoinTable(name = "user_roles")
     private Set<Roles> roles;
-
 
     public User(Long id, String username, String email, String password) {
         this.id = id;
@@ -60,16 +60,20 @@ public class User{
     public void setPassword(String password) {
         this.password = password;
     }
+
     public String getEmail() {
         return email;
     }
 
     public void setEmail(String email) {
-        this.password = email;
+        this.email = email;
     }
 
     public Collection<User> getRoles() {
         throw new UnsupportedOperationException("Unimplemented method 'getRoles'");
     }
 
+    public void setRoles(Set<Roles> roles) {
+        this.roles = roles;
+    }
 }

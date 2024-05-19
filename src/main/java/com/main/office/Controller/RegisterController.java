@@ -17,7 +17,7 @@ public class RegisterController {
 
     @GetMapping("/register")
     public String showRegistrationForm(Model model) {
-        model.addAttribute("user", new User()); // Add an empty User object to the model
+        model.addAttribute("user", new User());
         return "register";
     }
 
@@ -33,5 +33,3 @@ public class RegisterController {
         }
     }
 }
-
-
