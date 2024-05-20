@@ -15,6 +15,7 @@ import org.antlr.v4.runtime.misc.NotNull;
 @Entity
 @Table(name = "users")
 public class User {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;

@@ -28,7 +28,7 @@
 
     </nav><br><br><br>
 
-    <h1>Welcome, back<span th:text="${usernamе}"></span>!</h1>
+    <h1 id="welcomeMessage">Welcome, back<span th:text="${usernamе}"></span>!</h1>
 
     <div id="reservationFormContainer" style="display: none;">
         <form th:action="@{/rooms/reserve}" method="post">
@@ -41,7 +41,16 @@
 
     <script>
         document.getElementById("showFormBtn").addEventListener("click", function () {
-            document.getElementById("reservationFormContainer").style.display = "block";
+            var formContainer = document.getElementById("reservationFormContainer");
+            var welcomeMessage = document.getElementById("welcomeMessage");
+
+            if (formContainer.style.display === "none") {
+                formContainer.style.display = "block";
+                welcomeMessage.style.display = "none";
+            } else {
+                formContainer.style.display = "none";
+                welcomeMessage.style.display = "block";
+            }
         });
     </script>
 
